@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do</title>
+    
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/assets/styles.css" class="stylesheet">
+</head>
+<body>
+    <div class="container center"><h1>My to-do list</h1></div>
+    <div id="todo-table">
+        <form method="POST">
+            <div class="container center">
+                <div class="row">
+                    <div class="col s8">
+                            <input type="text" name="item" placeholder="Add new item.." required>
+                    </div>
+                    <div class="col s4">
+                            <button type="submit">Add Item</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <ul>
+            <% for(var i = 0; i < tasks.length; i++){ %>
+                <li><%= tasks[i].item %></li>
+            <% }; %>
+    </div>
+    <script src="/assets/todo-list.js"></script>
+</body>
+</html>
